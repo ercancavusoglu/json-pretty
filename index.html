@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Pretty</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+	<textarea id="demo" onclick="prettyData()" rows="100" cols="420"></textarea>
+
+	<script>
+		function prettyData(){
+			var txt = document.getElementById("demo").value;
+			if (txt) {
+				var jsonObj = JSON.parse(txt);	
+				var jsonPretty = JSON.stringify(jsonObj, null, '\t');
+				document.getElementById("demo").value = jsonPretty;
+			}
+		}
+	</script>
+
+</body>
+</html>
